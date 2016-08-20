@@ -1,0 +1,6 @@
+---
+maven_jpackage_release_rpm: jpackage-release-5-4.jpp5.noarch.rpm
+maven_jpackage_release_url: "http://mirrors.dotsrc.org/jpackage/5.0/generic/free/RPMS/{{ maven_jpackage_release_rpm }}"
+
+# List of jpackage5 RPMs for maven_install_from=='packages'
+maven_jpackage_packages: []

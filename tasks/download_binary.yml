@@ -1,0 +1,19 @@
+---
+- name: Set maven_binary_file
+  set_fact:
+    maven_binary_file: "apache-maven-{{ maven_version }}-bin.tar.gz"
+#- debug: var=maven_binary_file
+
+- name: Load maven binary tarbll MD5
+  set_fact:
+    maven_binary_md5: "{{ item.split(' ')|first }}"
+  with_url:
+    - "{{ maven_url_base }}/binaries/{{ maven_binary_file }}.md5"
+#- debug: var=maven_binary_md5
+
+- name: Download maven binary tarball
+  get_url:
+    url: "{{ maven_url_base }}/binaries/{{ maven_binary_file }}"
+    dest: "{{ maven_cache_dir }}/{{ maven_binary_file }}"
+    checksum: md5:{{ maven_binary_md5 }}
+

@@ -1,0 +1,36 @@
+---
+- name: Use jpackage6 @packages
+  include_vars: jpackage6.yml
+
+- name: Download jpackage RPM packages @yum @packages
+  get_url:
+    url:  "{{ item.url }}"
+    dest: "{{ maven_cache_dir }}/{{ item.rpm }}"
+  with_items: "{{ maven_jpackage_rpm_packages }}"
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install jpackage RPM packages into localrepo @yum @packages
+  copy:
+    dest: "{{ localrepo_path }}/{{ item.rpm }}"
+    src:  "{{ maven_cache_dir }}/{{ item.rpm }}"
+    remote_src: yes
+  with_items: "{{ maven_jpackage_rpm_packages }}"
+  become: yes
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Force reindex localrepo @yum @packages
+  command: /bin/true
+  notify: reindex localrepo
+  when: ansible_pkg_mgr == 'yum'
+- meta: flush_handlers
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install maven2 @yum
+  yum:
+    state: present
+    name: maven2
+    # because maven-scm-1.8-1.jpp6.noarch.rpm is not signed
+    disable_gpg_check: yes
+  when: ansible_pkg_mgr == 'yum'
+  become: yes
+

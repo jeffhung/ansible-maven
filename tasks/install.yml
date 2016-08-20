@@ -1,0 +1,4 @@
+---
+- name: Install maven from {{ maven_install_from }}
+  include: "install_from_{{ maven_install_from }}.yml"
+

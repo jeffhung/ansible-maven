@@ -1,0 +1,194 @@
+---
+maven_jpackage_release_rpm: jpackage-release-6-3.jpp6.noarch.rpm
+maven_jpackage_release_url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/{{ maven_jpackage_release_rpm }}"
+
+# List of missing jpackage RPMs for maven_install_from=='repositories'
+maven_jpackage_rpm_missing:
+  - rpm: sisu2-2.2.1-1.jpp6.noarch.rpm
+    url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/devel/RPMS/sisu2-2.2.1-1.jpp6.noarch.rpm"
+  - rpm: maven-doxia-tools-1.2-1.jpp6.noarch.rpm
+    url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/devel/RPMS/maven-doxia-tools-1.2-1.jpp6.noarch.rpm"
+  - rpm: maven-shared-artifact-resolver-1.0-1.jpp6.noarch.rpm
+    url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/devel/RPMS/maven-shared-artifact-resolver-1.0-1.jpp6.noarch.rpm"
+
+# List of jpackage RPMs for maven_install_from=='packages'
+maven_jpackage_rpm_packages:
+# - rpm: aopalliance-1.0-7.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/aopalliance-1.0-7.jpp6.noarch.rpm"
+# - rpm: apache-commons-beanutils-1.8.3-4.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-beanutils-1.8.3-4.jpp6.noarch.rpm"
+# - rpm: apache-commons-cli-1.2-6.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-cli-1.2-6.jpp6.noarch.rpm"
+# - rpm: apache-commons-codec-1.8-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-codec-1.8-1.jpp6.noarch.rpm"
+# - rpm: apache-commons-collections-3.2.1-6.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-collections-3.2.1-6.jpp6.noarch.rpm"
+# - rpm: apache-commons-digester-1.8.1-11.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-digester-1.8.1-11.jpp6.noarch.rpm"
+# - rpm: apache-commons-httpclient-3.1-6.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-httpclient-3.1-6.jpp6.noarch.rpm"
+# - rpm: apache-commons-io-1.4-13.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-io-1.4-13.jpp6.noarch.rpm"
+# - rpm: apache-commons-lang-2.6-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-lang-2.6-1.jpp6.noarch.rpm"
+# - rpm: apache-commons-logging-1.1.3-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-logging-1.1.3-2.jpp6.noarch.rpm"
+# - rpm: apache-commons-net-2.2-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-net-2.2-1.jpp6.noarch.rpm"
+# - rpm: apache-commons-validator-1.4-0.r832761.5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-commons-validator-1.4-0.r832761.5.jpp6.noarch.rpm"
+# - rpm: apache-felix-1-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-1-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-framework-3.0.9-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-framework-3.0.9-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-javax-servlet-1.0.0-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-javax-servlet-1.0.0-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-main-3.0.9-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-main-3.0.9-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-osgi-compendium-1.4.0-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-osgi-compendium-1.4.0-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-osgi-core-1.4.0-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-osgi-core-1.4.0-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-osgi-foundation-1.2.0-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-osgi-foundation-1.2.0-9.jpp6.noarch.rpm"
+# - rpm: apache-felix-shell-1.4.2-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-felix-shell-1.4.2-9.jpp6.noarch.rpm"
+# - rpm: apache-poi-3.8-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/apache-poi-3.8-2.jpp6.noarch.rpm"
+# - rpm: aqute-bndlib-0.0.363-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/aqute-bndlib-0.0.363-1.jpp6.noarch.rpm"
+# - rpm: atinject-1-8.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/atinject-1-8.jpp6.noarch.rpm"
+# - rpm: bouncycastle-1.46-1.el6.noarch.rpm
+#   url: "http://dl.fedoraproject.org/pub/epel/6/i386/bouncycastle-1.46-1.el6.noarch.rpm"
+# - rpm: cglib-2.2.2-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/cglib-2.2.2-3.jpp6.noarch.rpm"
+# - rpm: checkstyle4-4.4-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/checkstyle4-4.4-5.jpp6.noarch.rpm"
+# - rpm: classworlds-1.1-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/classworlds-1.1-5.jpp6.noarch.rpm"
+# - rpm: codehaus-stax-api-1.2.0-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/codehaus-stax-api-1.2.0-1.jpp6.noarch.rpm"
+# - rpm: concurrent-1.3.4-10.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/concurrent-1.3.4-10.jpp6.noarch.rpm"
+# - rpm: day-jcr-1.0-api-1.0-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/day-jcr-1.0-api-1.0-2.jpp6.noarch.rpm"
+# - rpm: dom4j-1.6.1-13.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/dom4j-1.6.1-13.jpp6.noarch.rpm"
+# - rpm: fontbox-0.1.0-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/fontbox-0.1.0-2.jpp6.noarch.rpm"
+# - rpm: forge-parent-5-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/forge-parent-5-9.jpp6.noarch.rpm"
+# - rpm: ganymed-ssh2-250-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/ganymed-ssh2-250-1.jpp6.noarch.rpm"
+# - rpm: geronimo-j2ee-connector-1.5-api-1.6-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/geronimo-j2ee-connector-1.5-api-1.6-9.jpp6.noarch.rpm"
+# - rpm: geronimo-jpa-3.0-api-1.6-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/geronimo-jpa-3.0-api-1.6-9.jpp6.noarch.rpm"
+# - rpm: geronimo-jta-1.0.1B-api-1.6-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/geronimo-jta-1.0.1B-api-1.6-9.jpp6.noarch.rpm"
+# - rpm: glassfish-jaf-1.1.0-6.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/glassfish-jaf-1.1.0-6.jpp6.noarch.rpm"
+# - rpm: glassfish-javamail-1.4.0-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/glassfish-javamail-1.4.0-5.jpp6.noarch.rpm"
+# - rpm: google-collections-1.0-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/google-collections-1.0-5.jpp6.noarch.rpm"
+# - rpm: google-guice-2.0-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/google-guice-2.0-2.jpp6.noarch.rpm"
+# - rpm: gnu-regexp-1.1.4-14.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/gnu-regexp-1.1.4-14.jpp6.noarch.rpm"
+# - rpm: httpunit-1.7-4.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/httpunit-1.7-4.jpp6.noarch.rpm"
+# - rpm: isorelax-0-0.5.release20050331.el6.1.noarch.rpm
+#   url: "http://dl.fedoraproject.org/pub/epel/6/i386/isorelax-0-0.5.release20050331.el6.1.noarch.rpm"
+# - rpm: jackrabbit-1.6.5-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/jackrabbit-1.6.5-1.jpp6.noarch.rpm"
+# - rpm: javacvs-5.0-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/javacvs-5.0-5.jpp6.noarch.rpm"
+# - rpm: javacvs-lib-5.0-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/javacvs-lib-5.0-5.jpp6.noarch.rpm"
+# - rpm: jaxen-1.1.3-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/jaxen-1.1.3-1.jpp6.noarch.rpm"
+# - rpm: json-20080425-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/json-20080425-2.jpp6.noarch.rpm"
+# - rpm: jsoup-1.6.2-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/jsoup-1.6.2-1.jpp6.noarch.rpm"
+# - rpm: kxml2-2.2.2-4.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/kxml2-2.2.2-4.jpp6.noarch.rpm"
+# - rpm: lucene-2.4.1-5.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/lucene-2.4.1-5.jpp6.noarch.rpm"
+  - rpm: maven2-2.0.8-39.jpp6.noarch.rpm
+    url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven2-2.0.8-39.jpp6.noarch.rpm"
+# - rpm: maven-doxia-1.0-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-doxia-1.0-2.jpp6.noarch.rpm"
+# - rpm: maven-jxr-2.2-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-jxr-2.2-2.jpp6.noarch.rpm"
+# - rpm: maven-scm-1.8-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-scm-1.8-1.jpp6.noarch.rpm"
+# - rpm: maven-scm-test-1.8-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-scm-test-1.8-1.jpp6.noarch.rpm"
+# - rpm: maven-shared-8-0.p8.14.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-shared-8-0.p8.14.jpp6.noarch.rpm"
+# - rpm: maven-shared-reporting-impl-2.1-0.p8.14.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-shared-reporting-impl-2.1-0.p8.14.jpp6.noarch.rpm"
+# - rpm: maven-wagon-1.0-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven-wagon-1.0-1.jpp6.noarch.rpm"
+# - rpm: maven2-common-poms-1.0-12.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/maven2-common-poms-1.0-12.jpp6.noarch.rpm"
+# - rpm: msv-1.2-0.20050722.7.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/msv-1.2-0.20050722.7.jpp6.noarch.rpm"
+# - rpm: msv-xsdlib-1.2-0.20050722.7.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/msv-xsdlib-1.2-0.20050722.7.jpp6.noarch.rpm"
+# - rpm: nekohtml-1.9.14-4.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/nekohtml-1.9.14-4.jpp6.noarch.rpm"
+# - rpm: pdfbox-0.7.3-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/pdfbox-0.7.3-3.jpp6.noarch.rpm"
+# - rpm: plexus-cipher-1.7-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-cipher-1.7-3.jpp6.noarch.rpm"
+# - rpm: plexus-container-default-1.0-0.a9s1.2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-container-default-1.0-0.a9s1.2.jpp6.noarch.rpm"
+# - rpm: plexus-containers-1.5.5-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-containers-1.5.5-1.jpp6.noarch.rpm"
+# - rpm: plexus-containers-component-annotations-1.5.5-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-containers-component-annotations-1.5.5-1.jpp6.noarch.rpm"
+# - rpm: plexus-i18n-1.0-0.b10.1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-i18n-1.0-0.b10.1.jpp6.noarch.rpm"
+# - rpm: plexus-interactivity-1.0-0.a6.1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-interactivity-1.0-0.a6.1.jpp6.noarch.rpm"
+# - rpm: plexus-interpolation-1.14-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-interpolation-1.14-1.jpp6.noarch.rpm"
+# - rpm: plexus-sec-dispatcher-1.4-7.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-sec-dispatcher-1.4-7.jpp6.noarch.rpm"
+# - rpm: plexus-utils-1.5.15-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-utils-1.5.15-3.jpp6.noarch.rpm"
+# - rpm: plexus-velocity-1.1.7-9.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/plexus-velocity-1.1.7-9.jpp6.noarch.rpm"
+# - rpm: relaxngDatatype-1.0-4.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/relaxngDatatype-1.0-4.jpp6.noarch.rpm"
+# - rpm: saxon9-B.9.0.0.8-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/saxon9-B.9.0.0.8-2.jpp6.noarch.rpm"
+# - rpm: saxon9-dom-B.9.0.0.8-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/saxon9-dom-B.9.0.0.8-2.jpp6.noarch.rpm"
+# - rpm: saxon9-xpath-B.9.0.0.8-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/saxon9-xpath-B.9.0.0.8-2.jpp6.noarch.rpm"
+# - rpm: sisu-guice-2.9.2-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/sisu-guice-2.9.2-3.jpp6.noarch.rpm"
+# - rpm: sisu-maven-plugin-1.1-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/sisu-maven-plugin-1.1-3.jpp6.noarch.rpm"
+# - rpm: sisu2-2.2.1-1.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/devel/RPMS/sisu2-2.2.1-1.jpp6.noarch.rpm"
+# - rpm: sonatype-plugins-parent-6-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/sonatype-plugins-parent-6-2.jpp6.noarch.rpm"
+# - rpm: tomcat6-servlet-2.5-api-6.0.33-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/tomcat6-servlet-2.5-api-6.0.33-2.jpp6.noarch.rpm"
+# - rpm: xml-commons-resolver11-1.3.04-10.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/xml-commons-resolver11-1.3.04-10.jpp6.noarch.rpm"
+# - rpm: xmlbeans-2.4.0-3.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/xmlbeans-2.4.0-3.jpp6.noarch.rpm"
+# - rpm: xpp2-2.1.10-7.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/xpp2-2.1.10-7.jpp6.noarch.rpm"
+# - rpm: xpp3-1.1.4-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/xpp3-1.1.4-2.jpp6.noarch.rpm"
+# - rpm: xom-1.2.6-2.jpp6.noarch.rpm
+#   url: "http://mirrors.dotsrc.org/jpackage/6.0/generic/free/RPMS/xom-1.2.6-2.jpp6.noarch.rpm"
+

@@ -1,0 +1,54 @@
+---
+- name: Use jpackage6 @packages
+  include_vars: jpackage6.yml
+
+- name: Use jpackage6 @repositories
+  include_vars: jpackage6.yml
+
+- name: Download jpackage-release @yum @repositories
+  get_url:
+    url: "{{ maven_jpackage_release_url }}"
+    dest: "{{ maven_cache_dir }}/{{ maven_jpackage_release_rpm }}"
+  become: yes
+  when: ansible_pkg_mgr == 'yum'
+
+# TODO: install GPG key for jpackage-release
+
+- name: Install jpackage-release @yum @repositories
+  yum:  state=present name="{{ maven_cache_dir }}/{{ maven_jpackage_release_rpm }}"
+  become: yes
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Download missing packages @yum @repositories
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ maven_cache_dir }}/{{ item.rpm }}"
+  with_items: "{{ maven_jpackage_rpm_missing }}"
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install missing RPM packages into localrepo @yum @repositories
+  copy:
+    dest: "{{ localrepo_path }}/{{ item.rpm }}"
+    src:  "{{ maven_cache_dir }}/{{ item.rpm }}"
+    remote_src: yes
+  with_items: "{{ maven_jpackage_rpm_missing }}"
+  become: yes
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Force reindex localrepo @yum @repositories
+  command: /bin/true
+  notify: reindex localrepo
+  when: ansible_pkg_mgr == 'yum'
+- meta: flush_handlers
+  when: ansible_pkg_mgr == 'yum'
+
+- name: Install maven2 @yum
+  yum:
+    state: present
+    name: maven2
+    # because maven-scm-1.8-1.jpp6.noarch.rpm is not signed
+    disable_gpg_check: yes
+  when: ansible_pkg_mgr == 'yum'
+  become: yes
+
+

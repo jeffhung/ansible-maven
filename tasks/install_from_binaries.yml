@@ -1,0 +1,23 @@
+---
+- name: Download maven binary file
+  include: download_binary.yml
+
+- name: Ensure {{ maven_dir_base }} exists
+  file:
+    path: "{{ maven_dir_base }}"
+    state: directory
+    recurse: true
+  become: true
+
+- name: Extract maven tarball
+  unarchive:
+    src: "{{ maven_cache_dir }}/{{ maven_binary_file }}"
+    dest: "{{ maven_dir_base }}"
+    creates: "{{ maven_dir_base }}/apache-maven-{{ maven_version }}/bin/mvn"
+    copy: no
+  become: true
+
+- name: Add mvn to $PATH globally
+  template: src=profile.sh.j2 dest=/etc/profile.d/maven.sh
+  become: true
+

@@ -1,0 +1,15 @@
+---
+
+- block:
+
+  - name: Install prerequisites (yum)
+    yum: state=present name={{ item }}
+    with_items:
+      - rpm-build
+    when: ansible_pkg_mgr == 'yum'
+
+  become: yes
+
+- name: Download maven binary file
+  include: download_binary.yml
+

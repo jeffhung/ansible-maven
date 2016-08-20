@@ -1,0 +1,4 @@
+---
+maven_url_base: "https://archive.apache.org/dist/maven/maven-{{ maven_version.split('.')|first }}/{{ maven_version }}"
+maven_dir_base: /opt
+

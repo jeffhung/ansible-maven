@@ -1,0 +1,21 @@
+---
+# Choose maven version if maven_install_from=binary
+#                      or maven_environment=build
+# Current latest maven versions available on Apache: 2.2.1, 3.3.9
+maven_version: 2.2.1
+
+# Which environment to deploy:
+# - devel: provision devel-time environment for developing with Maven
+# - build: provision build-time environment for packaging Maven
+maven_environment: devel
+
+# Install from which source?
+# - binaries: install from binary tarball
+# - packages: install from automatically downloaded RPM/DEB packages
+# - repositories: install from YUM/APT repositories
+maven_install_from: binaries
+
+# Cache directory for holding downloaded/generated files.
+# The default is /vagrant/files so cache persist between boxes.
+maven_cache_dir: /vagrant/files
+

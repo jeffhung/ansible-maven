@@ -1,0 +1,9 @@
+---
+- name: Prepare maven build environment
+  include: build.yml
+  when: maven_environment == 'build'
+
+- name: Initiate maven install process
+  include: install.yml
+  when: maven_environment != 'build'
+
